@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 #      - name: build
 #      - uses: docker/build-push-action@latest
 #        with:
