@@ -4,8 +4,16 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      -
+        name: checkout
         uses: actions/checkout@v3
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
 #      - name: build
 #      - uses: docker/build-push-action@latest
 #        with:
